@@ -1,3 +1,8 @@
 #!/usr/bin/env python
 
-raise NotImplementedError("Not written yet")
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(
+    ext_modules = cythonize("rk/rk.pyx")
+)

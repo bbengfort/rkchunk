@@ -1,8 +1,9 @@
 
 import os
-import rk
 import time
 import argparse
+
+from rk import rk
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -11,7 +12,8 @@ if __name__ == '__main__':
 
     size = os.path.getsize(args.src[0])
     with open(args.src[0], 'r+b') as f:
-        data = bytearray(f.read())
+        # data = bytearray(f.read())
+        data = f.read()
 
     print "read '%s' %d bytes" % (args.src[0], size)
 
